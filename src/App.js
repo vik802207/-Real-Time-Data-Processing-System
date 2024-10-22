@@ -2,15 +2,17 @@
 import './App.css';
 //import Dark from './component/Dark';
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Navbar from './component/Navbar';
 
 import Alert from './component/Alert';
 
-// import Dark_mode from './component/Dark_mode';
+// import Dark_mode from './component/dark_mode';
 import Text from './component/Text';
 import Dark from './component/Dark';
+import Render from './component/Render';
+import New from './component/New';
 
 
 function App() {
@@ -42,20 +44,29 @@ function App() {
  
   return (
    <>
-   
+ 
   <Router>
+  <Navbar title="WELCOME" mode={mode} toggle={toggle}/>
+  <Text heading="Enter text to analyse" showalert= {showalert} />
+     <Alert alert={alert} />
+     {/* <Render></Render> */}
+     <New></New>
       <Routes>
-        <Route path="/" element={<Navbar  mode={mode} toggle={toggle}/>} />
-        <Route path="/about" element={<Dark />} />
+        <Route path="/" element={<Navbar title="WELCOME" mode={mode} toggle={toggle}/>} />
+
+        {/* <Route path="/about" element={<Dark/> } /> */}
+        <Route path='/about'element={<Dark/>} >
+          
+        </Route>
+
+        
+
        
       </Routes>
+   
+       
     </Router>
-  
-    <Text heading="Enter text to analyse" showalert= {showalert} />
-  
-  <Alert alert={alert} />
-  <Dark/>
-  {/* <Dark_mode></Dark_mode> */}
+   
    </>
   );
 }

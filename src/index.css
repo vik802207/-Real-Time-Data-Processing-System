@@ -19,7 +19,7 @@ nav{
  a{
   display: flex;
   text-decoration: none;
-  color: red;
+  color: rgb(0, 255, 98);
   list-style: none;
   padding: 5px;
 }
@@ -50,3 +50,4 @@ li{
     }
   
 }
+

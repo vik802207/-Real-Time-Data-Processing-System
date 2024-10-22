@@ -1,0 +1,6 @@
+{
+    "interval": 300000, 
+    "thresholdTemperature": 35,
+    "metros": ["Delhi", "Mumbai", "Chennai", "Bangalore", "Kolkata", "Hyderabad"]
+  }
+  
